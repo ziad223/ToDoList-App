@@ -1,0 +1,331 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Arial" , "Helvetica" , "sans-serif" ;
+}
+h1{
+    font-size: 30px;
+    margin: 20px;
+    text-align: center;
+    color:#e91e63;
+}
+.todo-container{
+ width: 600px;
+ margin: 30px auto 0;
+ background-color: hsl(0, 0%, 96%);
+}
+.todo-container .add-task{
+    padding: 15px;
+    background-color: #009688;
+    position: relative;
+}
+.todo-container .add-task input{
+    display: inline-block;
+     padding: 10px 15px;
+     border: none;
+     background-color: rgba(255,255,255,0.3);
+     width: calc(100% - 15px);
+     color: #fff;
+     font-size: 20px;
+     outline: none;
+}
+.todo-container .add-task input:focus input{
+    border: none;  
+}
+.todo-container .add-task .plus{
+    position: absolute;
+    height: 43px;
+    width: 43px;
+    background-color: #fff;
+    right: 12px;
+    border-radius: 50%;
+    line-height: 43px;
+    text-align: center; 
+    color: #009688;
+    cursor: pointer;
+    font-size: 38px;
+    transition: 0.3s;
+}
+.todo-container .add-task .plus:hover{
+    transform: rotate(90deg);
+}
+.todo-container .tasks-content{
+    padding: 15px;
+}
+.todo-container .tasks-content .no-tasks-message{
+    color: #777;
+    font-size: 15px;
+}
+.todo-container .tasks-content > span{
+    display: block;
+    background-color: #fff;
+    padding: 10px;
+}
+.todo-container .tasks-content > span:not(:last-child){
+    margin-bottom: 10px;
+}
+.todo-container .tasks-content .task-box .delete{
+    float: right;
+    background-color: #e91e63;
+    padding: 4px 10px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.task-stats{
+overflow: hidden;
+margin: 10px auto;
+width: 600px;
+font-size: 12px;
+}
+.task-stats .tasks-count{
+    width: 50%;
+    float: left;
+    padding: 10px;
+}
+.task-stats .tasks-count{
+    width: 50%;
+    float: left;
+    padding: 10px;
+    font-size: 20px;
+}
+.task-stats .tasks-completed{
+    width: 50%;
+    float: right;
+    padding: 10px;
+    text-align: right;
+    font-size: 20px;
+
+}
+.task-stats .tasks-count span,
+.task-stats .tasks-completed span{
+    color: #fff;
+    padding: 5px 7px;
+    font-size: 15px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+.task-stats .tasks-count span{
+    background-color: #e91e63;
+}
+.task-stats .tasks-completed span{
+    background-color: #03a9f4;
+}
+
+@media screen and (min-width:401px) and (max-width:767px){
+    h1{
+        font-size: x-large;
+    }
+    .todo-container{
+        max-width: 400px;
+    }
+    .todo-container .add-task{
+        padding: 12px;
+    }
+    .todo-container .add-task input{
+         padding: 7px 2px;
+         width: calc(100% - 20px);
+         font-size: large;
+    }
+    .todo-container .add-task .plus{
+        position: absolute;
+        height: 35px;
+        width: 35px;
+        right: 2px;
+        line-height: 35px;
+        font-size: x-large;
+    }
+    .todo-container .tasks-content{
+        padding: 10px;
+    }
+    .todo-container .tasks-content .task-box .delete{
+        padding: 4px 6px;
+        font-size: medium ;
+    }
+    .task-stats{
+        margin: 8px auto;
+        width: 400px;
+        font-size: medium;
+        }
+        .task-stats .tasks-count{
+            float: left;
+            padding: 7px;
+            font-size: 17px;
+        }
+        .task-stats .tasks-completed{
+            padding: 7px;
+            font-size: 17px;
+
+        }
+        .task-stats .tasks-count span,
+         .task-stats .tasks-completed span{
+          padding: 3px 5px;
+          font-size: small;
+  
+     }
+     .todo-container .tasks-content .no-tasks-message{
+        font-size: medium;
+    }
+}
+
+@media screen and (max-width:400px){
+    h1{
+        font-size: medium;
+    }
+    .todo-container{
+        max-width: 300px;
+    }
+    .todo-container .add-task{
+        padding: 10px;
+    }
+    .todo-container .add-task input{
+         padding: 5px 10px;
+         width: calc(100% - 10px);
+         font-size: medium;
+    }
+    .todo-container .add-task .plus{
+        position: absolute;
+        height: 28px;
+        width: 28px;
+        right: 2px;
+        line-height: 28px;
+        font-size: large;
+    }
+    .todo-container .tasks-content{
+        padding: 5px;
+    }
+    .todo-container .tasks-content .task-box .delete{
+        padding: 2px 6px;
+        font-size: small;
+    }
+    .task-stats{
+        margin: 5px auto;
+        width: 300px;
+        font-size: small;
+        }
+        .task-stats .tasks-count{
+            float: left;
+            padding: 5px;
+            font-size: 14px;
+        }
+        .task-stats .tasks-completed{
+            padding: 5px;
+            font-size: 14px;
+        }
+        .task-stats .tasks-count span,
+         .task-stats .tasks-completed span{
+    padding: 2px 3px;
+    font-size: small;
+   }
+   .todo-container .tasks-content .no-tasks-message{
+    font-size: small;
+}
+}
+
+@media screen and (min-width:768px) and (max-width:992px){
+    h1{
+        font-size: 30px;
+    }
+    .todo-container{
+        max-width: 500px;
+    }
+    .todo-container .add-task{
+        padding: 15px;
+    }
+    .todo-container .add-task input{
+         padding: 8px 4px;
+         width: calc(100% - 20px);
+         font-size: large;
+    }
+    .todo-container .add-task .plus{
+        height: 38px;
+        width: 38px;
+        right: 2px;
+        line-height: 38px;
+        font-size: xx-large;
+    }
+    .todo-container .tasks-content{
+        padding: 15px;
+    }
+    .todo-container .tasks-content .task-box .delete{
+        padding: 6px 8px;
+        font-size: large ;
+    }
+    .task-stats{
+        margin: 10px auto;
+        width: 500px;
+        font-size: medium;
+        }
+        .task-stats .tasks-count{
+            float: left;
+            padding: 10px;
+        }
+        .task-stats .tasks-completed{
+            padding: 10px;
+        }
+        .task-stats .tasks-count span,
+         .task-stats .tasks-completed span{
+          padding: 3px 5px;
+          font-size: large;
+  
+     }
+     .todo-container .tasks-content .no-tasks-message{
+        font-size: large;
+    }
+ 
+}
+
+@media screen and (min-width:993px) and (max-width:1280px){
+    h1{
+        font-size: 40px;
+    }
+    .todo-container{
+        max-width: 600px;
+    }
+    .todo-container .add-task{
+        padding: 15px;
+    }
+
+    .todo-container .add-task .plus{
+        height: 43px;
+        width: 43px;
+        right: 10px;
+        line-height: 43px;
+        font-size: xx-large;
+    }
+    .todo-container .tasks-content{
+        padding: 15px;
+    }
+    .todo-container .tasks-content .task-box .delete{
+        padding: 6px 8px;
+        font-size: large ;
+    }
+    .task-stats{
+        margin: 10px auto;
+        width: 600px;
+        font-size: medium;
+        }
+        .task-stats .tasks-count{
+            float: left;
+            padding: 10px;
+        }
+        .task-stats .tasks-completed{
+            padding: 10px;
+        }
+        .task-stats .tasks-count span,
+         .task-stats .tasks-completed span{
+          padding: 3px 5px;
+          font-size: large;
+  
+     }
+     .todo-container .tasks-content .no-tasks-message{
+        font-size: x-large;
+    }
+ 
+}
